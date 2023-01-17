@@ -110,7 +110,9 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(array/*your code here*/){
+  array.pop();
+  return array
  /*your code here*/
 }
 
@@ -128,7 +130,8 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(array, number/*your code here*/){
+  return array[number]
   /*your code here*/
 }
 
@@ -148,7 +151,13 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(array,flavor/*your code here*/){
+  for (let i =0; i<array.length; i++){
+    if (array[i]=== flavor){
+      array.splice(i,1);
+    }
+  }
+  return array;
   /*your code here*/
 }
 
@@ -173,8 +182,15 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
+function filterByWord(array,flavor/*your code here*/){
   /*your code here*/
+  let filteredArray = [];
+  for(let i = 0; i<array.length; i++){
+    if(array[i].includes(flavor)){
+      filteredArray.push(array[i]);
+    }
+  }
+  return filteredArray;
 }
 
 
