@@ -46,7 +46,8 @@ Use the copy function below to do the following:
 */
 
 
-function copy(/*your code here*/){
+function copy(array/*your code here*/){
+  return [...array]
   /*your code here*/
 }
 
@@ -63,8 +64,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
+function is31Flavors(array/*your code here*/){
   /*your code here*/
+  if (array.length === 31) {
+    return true;
+  
+  }else {
+    return false;
+  }
  }
 
 
@@ -82,9 +89,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
+function addFlavor(array,string/*your code here*/){
   /*your code here*/
+  array.unshift(string)
+    return array
  }
+ console.log(addFlavor(originalFlavors, 'rainbow sherbert'))
 
 
 
